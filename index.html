@@ -254,6 +254,25 @@
   .book-body .book-foot{margin-top:auto;display:flex;flex-direction:column;gap:12px;}
   .book-body .book-price{font-family:'Fraunces',serif;font-size:18px;color:var(--gold-bright);}
   .book-body .btn{width:100%;padding:12px 20px;font-size:13.5px;}
+
+  /* worksheets (icon-based, no cover art) */
+  .worksheets-label{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;color:var(--mist-dim);text-transform:uppercase;margin:56px 0 18px;}
+  .worksheets-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media(min-width:700px){.worksheets-grid{grid-template-columns:1fr 1fr;}}
+  .worksheet-card{
+    display:flex;gap:20px;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px 24px;
+  }
+  .worksheet-icon{
+    flex-shrink:0;width:52px;height:52px;border-radius:14px;background:var(--panel-2);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;font-size:22px;
+  }
+  .worksheet-body{display:flex;flex-direction:column;flex:1;}
+  .worksheet-body .book-kicker{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:var(--mist-dim);text-transform:uppercase;margin-bottom:6px;}
+  .worksheet-body h3{font-size:17px;margin-bottom:6px;color:var(--paper);}
+  .worksheet-body p{font-size:13.5px;color:var(--mist);margin-bottom:14px;}
+  .worksheet-body .book-foot{margin-top:auto;display:flex;flex-direction:column;gap:10px;align-items:flex-start;}
+  .worksheet-body .book-price{font-family:'Fraunces',serif;font-size:15px;color:var(--gold-bright);}
+  .worksheet-body .btn{padding:10px 22px;font-size:13px;}
   .books-note{text-align:center;margin-top:30px;font-size:13.5px;color:var(--mist-dim);}
   .books-note a{color:var(--gold);}
 
@@ -576,8 +595,8 @@
             <h3>Jeda Nafas: Seni Hadir di Saat Ini</h3>
             <p>Buku inti Suara Kesadaran ID — dasar-dasar jeda napas dan cara kembali hadir, ditulis runtut untuk dipraktikkan sendiri.</p>
             <div class="book-foot">
-              <span class="book-price">Cek harga di Lynk.id</span>
-              <a href="https://lynk.id/suara.kesadaran/j50wjy1qyvq2" target="_blank" rel="noopener" class="btn btn-gold">Beli di Lynk.id</a>
+              <span class="book-price">Penasaran isinya? →</span>
+              <a href="https://lynk.id/suara.kesadaran/j50wjy1qyvq2" target="_blank" rel="noopener" class="btn btn-gold">Lihat Selengkapnya</a>
             </div>
           </div>
         </div>
@@ -589,8 +608,8 @@
             <h3>Mata Ketiga</h3>
             <p>Bukan tentang hal gaib, tapi cara melihat hidup dengan kesadaran — mengenali apa yang selama ini luput dari perhatianmu sendiri.</p>
             <div class="book-foot">
-              <span class="book-price">Cek harga di Lynk.id</span>
-              <a href="https://lynk.id/suara.kesadaran/3g8pkol3v36l" target="_blank" rel="noopener" class="btn btn-gold">Beli di Lynk.id</a>
+              <span class="book-price">Penasaran isinya? →</span>
+              <a href="https://lynk.id/suara.kesadaran/3g8pkol3v36l" target="_blank" rel="noopener" class="btn btn-gold">Lihat Selengkapnya</a>
             </div>
           </div>
         </div>
@@ -602,8 +621,36 @@
             <h3>Pulih dari Utang</h3>
             <p>Panduan menyembuhkan luka finansial dan bangkit menjadi pribadi berkelimpahan — bukan sekadar tips uang, tapi memulihkan hubunganmu dengan uang.</p>
             <div class="book-foot">
-              <span class="book-price">Cek harga di Lynk.id</span>
-              <a href="https://lynk.id/suara.kesadaran/o91dzmp5zqno" target="_blank" rel="noopener" class="btn btn-gold">Beli di Lynk.id</a>
+              <span class="book-price">Penasaran isinya? →</span>
+              <a href="https://lynk.id/suara.kesadaran/o91dzmp5zqno" target="_blank" rel="noopener" class="btn btn-gold">Lihat Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="worksheets-label reveal">Butuh yang lebih terarah? Coba worksheet reflektif</p>
+      <div class="worksheets-grid reveal">
+        <div class="worksheet-card">
+          <div class="worksheet-icon">🧩</div>
+          <div class="worksheet-body">
+            <div class="book-kicker">Worksheet</div>
+            <h3>The Hidden Pattern</h3>
+            <p>Worksheet reflektif untuk memetakan pola pikir, emosi, dan reaksi yang selama ini berulang tanpa disadari.</p>
+            <div class="book-foot">
+              <span class="book-price">Penasaran isinya? →</span>
+              <a href="https://lynk.id/suara.kesadaran/38307rm8q17q" target="_blank" rel="noopener" class="btn btn-gold">Lihat Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div class="worksheet-card">
+          <div class="worksheet-icon">🧭</div>
+          <div class="worksheet-body">
+            <div class="book-kicker">Worksheet</div>
+            <h3>The Soul Path</h3>
+            <p>Worksheet reflektif untuk menemukan misi jiwamu — menyelami untuk apa kamu sebenarnya diciptakan, dan cara menjalaninya dalam hidup sehari-hari.</p>
+            <div class="book-foot">
+              <span class="book-price">Penasaran isinya? →</span>
+              <a href="https://lynk.id/suara.kesadaran/k37rxe43e36w" target="_blank" rel="noopener" class="btn btn-gold">Lihat Selengkapnya</a>
             </div>
           </div>
         </div>
