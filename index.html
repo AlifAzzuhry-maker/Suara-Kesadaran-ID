@@ -98,6 +98,34 @@
   .hero-sub{font-size:17px;color:var(--mist);max-width:520px;margin-bottom:34px;}
   .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px;}
   .hero-trust{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--mist-dim);}
+
+  /* Hero v3: single-column, co-primary widget, strict top-to-bottom hierarchy */
+  .hero-single{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:640px;margin:0 auto;}
+  .hero-kicker{opacity:0.55;font-size:11px;margin-bottom:18px;}
+  .hero-h1-center{font-size:clamp(28px,4.6vw,44px);line-height:1.2;margin:0 0 18px;max-width:600px;}
+  .hero-sub-center{font-size:16.5px;color:var(--mist);max-width:520px;margin:0 auto 36px;}
+  .hero-byline{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.04em;color:var(--mist-dim);margin:16px 0 26px;}
+  .hero-cta-main{display:flex;flex-direction:column;align-items:center;margin-bottom:16px;}
+  .hero-cta-note{font-size:11.5px;color:var(--mist-dim);margin-top:8px;}
+  .hero-cta-secondary{display:inline-flex;align-items:center;font-size:14px;color:var(--mist);border-bottom:1px solid var(--line-bright);padding-bottom:2px;}
+  .hero-cta-secondary:hover{color:var(--gold);border-color:var(--gold);}
+  @media(min-width:820px){.hero-single{max-width:680px;}}
+
+  /* Mobile-first compaction: keep headline -> subhead -> widget -> CTA within first viewport */
+  @media(max-width:600px){
+    .hero{padding:56px 0 56px;}
+    .hero-kicker{margin-bottom:6px;}
+    .hero-h1-center{font-size:23px;line-height:1.2;margin-bottom:8px;}
+    .hero-sub-center{font-size:14.5px;margin-bottom:14px;}
+    .breathe-card{padding:16px 16px 16px;margin-bottom:2px;}
+    .breathe-label-top{margin-bottom:10px;}
+    .breathe-stage{width:140px;height:140px;margin:0 auto 12px;}
+    .ring.r2{inset:14px;}
+    .breath-circle{width:72px;height:72px;}
+    .breathe-word{font-size:15px;margin-bottom:4px;}
+    .hero-byline{margin:6px 0 10px;}
+    .hero-cta-main{margin-bottom:8px;}
+  }
   .hero-trust .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);}
 
   /* breathing widget */
@@ -105,6 +133,7 @@
     background:linear-gradient(180deg,var(--panel-2),var(--panel));
     border:1px solid var(--line);border-radius:28px;
     padding:34px 24px 30px;text-align:center;position:relative;overflow:hidden;
+    width:100%;max-width:420px;margin:0 auto 8px;
   }
   .breathe-card::before{
     content:"";position:absolute;inset:0;
@@ -185,6 +214,17 @@
 
   /* ---------- METHOD ---------- */
   .method{padding:110px 0 60px;}
+  .method-intro{max-width:720px;margin:0 0 44px;}
+  .method-lead{font-size:16px;color:var(--paper);line-height:1.65;margin-bottom:24px;}
+  .method-flow{
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--mist);
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:16px 18px;margin-bottom:24px;
+  }
+  .method-flow span:not(.flow-arrow){color:var(--paper);}
+  .flow-arrow{color:var(--gold);}
+  .method-bridge{font-size:14.5px;color:var(--mist);font-style:italic;}
   .pillars{display:grid;grid-template-columns:1fr;gap:20px;counter-reset:pillar;}
   @media(min-width:760px){.pillars{grid-template-columns:repeat(4,1fr);}}
   .pillar{
@@ -336,10 +376,10 @@
       <span class="brand-name"><b>Suara Kesadaran</b><span>JEDA NAPAS · KESADARAN · KEHIDUPAN</span></span>
     </a>
     <div class="navlinks">
-      <a href="#jalur">Mulai dari Mana</a>
-      <a href="#metode">Metode</a>
       <a href="#untuk-siapa">Untuk Siapa</a>
+      <a href="#metode">Metode</a>
       <a href="#mentor">Mentor</a>
+      <a href="#jalur">Mulai dari Mana</a>
       <a href="#program">Program</a>
       <a href="#ebook">E-book</a>
       <a href="#faq">FAQ</a>
@@ -354,24 +394,13 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">Jeda · Sadar · Hadir · Menjalani</span>
-        <h1>Kamu tidak selalu <em>butuh jawaban</em>.<br>Kadang kamu hanya perlu <em>berhenti sejenak</em>.</h1>
-        <p class="hero-sub">Jeda Napas — praktik sederhana untuk mulai mengenali apa yang sedang terjadi di dalam diri. Tidak perlu memaksa napas. Tidak perlu mengejar sensasi. Cukup mulai dari satu jeda.</p>
-        <div class="hero-ctas">
-          <a href="https://wa.me/6283134715814?text=Halo%20Admin%2C%20saya%20mau%20minta%20Panduan%20Dasar%20Jeda%20Nafas%20%28PDF%20gratis%29%20dari%20Suara%20Kesadaran%20ID." target="_blank" rel="noopener" class="btn btn-gold">Mulai dari Panduan Jeda Nafas Gratis</a>
-          <a href="#metode" style="display:inline-flex;align-items:center;font-size:14px;color:var(--mist);border-bottom:1px solid var(--line-bright);padding-bottom:2px;">Kenali Suara Kesadaran ID</a>
-        </div>
-        <div class="hero-trust">
-          <span>Dipraktikkan lewat pengalaman sehari-hari</span>
-          <span class="dot"></span>
-          <span>Diikuti ribuan pencari makna di Indonesia</span>
-        </div>
-      </div>
+    <div class="wrap hero-single">
+      <span class="eyebrow hero-kicker">Jeda · Sadar · Hadir · Menjalani</span>
+      <h1 class="hero-h1-center">Sebelum Bereaksi, Ada Jeda yang Sering Kamu Lewatkan.</h1>
+      <p class="hero-sub hero-sub-center">Jeda Napas adalah latihan sederhana untuk menemukan ruang sebelum bereaksi — agar kita belajar merespons dengan lebih sadar.</p>
 
       <div class="breathe-card" id="breatheCard">
-        <div class="breathe-label-top">Coba dulu, satu jeda saja</div>
+        <div class="breathe-label-top">Coba sekarang — bukan cuma dibaca.</div>
         <div class="breathe-stage">
           <div class="ring r1"></div>
           <div class="ring r2"></div>
@@ -380,58 +409,15 @@
         <div class="breathe-word" id="breathWord">Tarik napas seperti biasa</div>
         <button class="breathe-next" id="breathNext" type="button">Ketuk untuk sadari jedanya →</button>
       </div>
-    </div>
-  </section>
 
-  <!-- JALUR (learning journey, not a sales funnel) -->
-  <section class="jalur" id="jalur">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Mulai dari mana?</span>
-        <h2>Ini bukan daftar yang harus kamu pilih sekaligus.</h2>
-        <p>Anggap saja peta perjalanan. Banyak orang mulai dari yang paling ringan dulu, baru lanjut kalau memang terasa perlu.</p>
-      </div>
-      <div class="jalur-grid reveal">
-        <a href="https://wa.me/6283134715814?text=Halo%20Admin%2C%20saya%20mau%20minta%20Panduan%20Dasar%20Jeda%20Nafas%20%28PDF%20gratis%29%20dari%20Suara%20Kesadaran%20ID." target="_blank" rel="noopener" class="jalur-card">
-          <div class="jalur-kicker">01 · Gratis</div>
-          <div class="jalur-icon">🌱</div>
-          <h3>Panduan Dasar Jeda Nafas</h3>
-          <p>Mulai dari sini kalau baru pertama kali dengar soal Jeda Nafas. Cukup baca dan coba sendiri.</p>
-          <span class="jalur-link">Minta Panduan Gratis →</span>
-        </a>
-        <a href="#ebook" class="jalur-card">
-          <div class="jalur-kicker">02 · Belajar Sendiri</div>
-          <div class="jalur-icon">📖</div>
-          <h3>E-book &amp; Worksheet</h3>
-          <p>Kalau ingin memahami lebih dalam, dengan waktu dan ruangmu sendiri, tanpa terikat jadwal.</p>
-          <span class="jalur-link">Jelajahi E-book →</span>
-        </a>
-        <a href="https://alifazzuhry-maker.github.io/Jeda-Nafas-Melihat-Diri/" target="_blank" rel="noopener" class="jalur-card">
-          <div class="jalur-kicker">03 · Private 1:1</div>
-          <div class="jalur-icon">🧘</div>
-          <h3>Jeda Nafas, Melihat Diri</h3>
-          <p>Kalau sudah siap dibimbing langsung, satu lawan satu, untuk melihat pola yang selama ini terlewat.</p>
-          <span class="jalur-link">Lihat Sesi Privat →</span>
-        </a>
-        <a href="https://alifazzuhry-maker.github.io/Jeda-Nafas-Kunci-Mengubah-Hidup-dari-Dalam/" target="_blank" rel="noopener" class="jalur-card featured">
-          <div class="jalur-kicker">04 · Pendampingan Premium</div>
-          <div class="jalur-icon">🧭</div>
-          <h3>Untuk yang ingin berproses lebih mendalam</h3>
-          <p>Pendampingan berkelanjutan, untuk yang benar-benar siap menjalani perubahan, bukan sekadar mencoba.</p>
-          <span class="jalur-link">Lihat Pendampingan →</span>
-        </a>
+      <div class="hero-byline">Metode Jeda Napas — Alif Azzuhry</div>
+
+      <div class="hero-cta-main">
+        <a href="https://wa.me/6283134715814?text=Halo%20Admin%2C%20saya%20mau%20minta%20Panduan%20Dasar%20Jeda%20Nafas%20%28PDF%20gratis%29%20dari%20Suara%20Kesadaran%20ID." target="_blank" rel="noopener" class="btn btn-gold" aria-label="Lanjut, ambil panduan Jeda Napas gratis melalui WhatsApp">Lanjut, Ambil Panduan Jeda Napas Gratis</a>
+        <span class="hero-cta-note">Panduan dikirim melalui WhatsApp.</span>
       </div>
 
-      <div class="qualify reveal">
-        <div class="qualify-label">Suara Kesadaran ID mungkin relevan buatmu kalau kamu...</div>
-        <div class="qualify-grid">
-          <div class="qualify-item"><span class="chk">＋</span>Ingin memahami diri lebih dalam, bukan sekadar mencari distraksi baru.</div>
-          <div class="qualify-item"><span class="chk">＋</span>Ingin membangun praktik kesadaran yang bisa dijalani, bukan cuma dipahami.</div>
-          <div class="qualify-item"><span class="chk">＋</span>Penasaran dengan hubungan antara pikiran, napas, dan respons tubuh.</div>
-          <div class="qualify-item"><span class="chk">＋</span>Sedang mencari pendekatan pengembangan diri yang lebih terstruktur dan masuk akal.</div>
-          <div class="qualify-item"><span class="chk">＋</span>Terbuka untuk didampingi secara personal, bukan cuma konsumsi konten.</div>
-        </div>
-      </div>
+      <a href="#metode" class="hero-cta-secondary">Kenali Metode Jeda Napas ↓</a>
     </div>
   </section>
 
@@ -468,8 +454,26 @@
       <div class="sec-head reveal">
         <span class="eyebrow">Metodenya</span>
         <h2>Bukan teori. Sebuah jalan pulang, dengan empat pijakan.</h2>
-        <p>Empat langkah ini berurutan dengan sengaja — masing-masing membangun kapasitas untuk langkah berikutnya, mulai dari satu jeda hingga dibawa ke kehidupan sehari-hari.</p>
       </div>
+
+      <div class="method-intro reveal">
+        <p class="method-lead">Jeda Napas adalah latihan sederhana untuk menemukan ruang sebelum bereaksi — agar kita belajar merespons dengan lebih sadar. Bukan sekadar menarik dan membuang napas: yang dilatih adalah jedanya — kesempatan kecil untuk menyadari apa yang sedang terjadi, sebelum memilih bagaimana merespons.</p>
+
+        <div class="method-flow">
+          <span>Terjadi sesuatu</span>
+          <span class="flow-arrow">→</span>
+          <span>Tubuh/pikiran bereaksi</span>
+          <span class="flow-arrow">→</span>
+          <span>Kita ambil jeda</span>
+          <span class="flow-arrow">→</span>
+          <span>Menyadari yang terjadi</span>
+          <span class="flow-arrow">→</span>
+          <span>Memilih respons</span>
+        </div>
+
+        <p class="method-bridge">Jeda kecil yang tadi kamu coba di atas — itu pintu masuknya. Empat pijakan berikut menjelaskan bagaimana jeda sederhana itu dibawa lebih jauh, ke kehidupan sehari-hari.</p>
+      </div>
+
       <div class="pillars reveal">
         <div class="pillar">
           <div class="pnum">01 / JEDA</div>
@@ -530,6 +534,58 @@
           <span>Praktisi Jeda Nafas</span>
           <span>Pendamping Kesadaran 1:1</span>
           <span>Edukator kesadaran &amp; kehidupan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JALUR (learning journey, not a sales funnel) -->
+  <section class="jalur" id="jalur">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Mulai dari mana?</span>
+        <h2>Ini bukan daftar yang harus kamu pilih sekaligus.</h2>
+        <p>Anggap saja peta perjalanan. Banyak orang mulai dari yang paling ringan dulu, baru lanjut kalau memang terasa perlu.</p>
+      </div>
+      <div class="jalur-grid reveal">
+        <a href="https://wa.me/6283134715814?text=Halo%20Admin%2C%20saya%20mau%20minta%20Panduan%20Dasar%20Jeda%20Nafas%20%28PDF%20gratis%29%20dari%20Suara%20Kesadaran%20ID." target="_blank" rel="noopener" class="jalur-card">
+          <div class="jalur-kicker">01 · Gratis</div>
+          <div class="jalur-icon">🌱</div>
+          <h3>Panduan Dasar Jeda Nafas</h3>
+          <p>Mulai dari sini kalau baru pertama kali dengar soal Jeda Nafas. Cukup baca dan coba sendiri.</p>
+          <span class="jalur-link">Minta Panduan Gratis →</span>
+        </a>
+        <a href="#ebook" class="jalur-card">
+          <div class="jalur-kicker">02 · Belajar Sendiri</div>
+          <div class="jalur-icon">📖</div>
+          <h3>E-book &amp; Worksheet</h3>
+          <p>Kalau ingin memahami lebih dalam, dengan waktu dan ruangmu sendiri, tanpa terikat jadwal.</p>
+          <span class="jalur-link">Jelajahi E-book →</span>
+        </a>
+        <a href="https://alifazzuhry-maker.github.io/Jeda-Nafas-Melihat-Diri/" target="_blank" rel="noopener" class="jalur-card">
+          <div class="jalur-kicker">03 · Private 1:1</div>
+          <div class="jalur-icon">🧘</div>
+          <h3>Jeda Nafas, Melihat Diri</h3>
+          <p>Kalau sudah siap dibimbing langsung, satu lawan satu, untuk melihat pola yang selama ini terlewat.</p>
+          <span class="jalur-link">Lihat Sesi Privat →</span>
+        </a>
+        <a href="https://alifazzuhry-maker.github.io/Jeda-Nafas-Kunci-Mengubah-Hidup-dari-Dalam/" target="_blank" rel="noopener" class="jalur-card featured">
+          <div class="jalur-kicker">04 · Pendampingan Premium</div>
+          <div class="jalur-icon">🧭</div>
+          <h3>Untuk yang ingin berproses lebih mendalam</h3>
+          <p>Pendampingan berkelanjutan, untuk yang benar-benar siap menjalani perubahan, bukan sekadar mencoba.</p>
+          <span class="jalur-link">Lihat Pendampingan →</span>
+        </a>
+      </div>
+
+      <div class="qualify reveal">
+        <div class="qualify-label">Suara Kesadaran ID mungkin relevan buatmu kalau kamu...</div>
+        <div class="qualify-grid">
+          <div class="qualify-item"><span class="chk">＋</span>Ingin memahami diri lebih dalam, bukan sekadar mencari distraksi baru.</div>
+          <div class="qualify-item"><span class="chk">＋</span>Ingin membangun praktik kesadaran yang bisa dijalani, bukan cuma dipahami.</div>
+          <div class="qualify-item"><span class="chk">＋</span>Penasaran dengan hubungan antara pikiran, napas, dan respons tubuh.</div>
+          <div class="qualify-item"><span class="chk">＋</span>Sedang mencari pendekatan pengembangan diri yang lebih terstruktur dan masuk akal.</div>
+          <div class="qualify-item"><span class="chk">＋</span>Terbuka untuk didampingi secara personal, bukan cuma konsumsi konten.</div>
         </div>
       </div>
     </div>
